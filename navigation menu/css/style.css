@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0F0F0F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    position: relative;
+}
+
+.bg {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 80%;
+    height: 100%;
+    background: #663399;
+    border-radius: 8px;
+    z-index: -5;
+}
+
+header ul {
+    background: rgba(255, 255, 255, 0.116);
+    padding: 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(30px);
+    display: flex;
+    list-style: none;
+    transition: transform .4s;
+}
+
+header ul:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.248);
+    transform: translateY(-5px);
+}
+
+header ul li {
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #F5F5F5;
+    position: relative;
+    padding: 10px 20px;
+    transition: all .4s;
+}
+
+header ul li a:hover {
+    color: #fff;
+}
+
+header ul li a::before {
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    z-index: -5;
+    transform: scaleX(0.8) scaleY(0);
+    transform-origin: bottom center;
+    transition: all .4s;
+}
+
+header ul li a:hover::before {
+    background: linear-gradient(to left, #d0bfff4f, #ffffff5d);
+    transform: scaleX(1) scaleY(1);
+}
